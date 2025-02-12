@@ -93,7 +93,7 @@
     <div class="row">
         <!-- 音乐疗愈卡片 -->
         <div class="col-md-4 acupoint">
-            < img src="https://via.placeholder.com/300x200" alt="养生音乐疗愈" class="img-fluid rounded" id="musicImage" style="cursor: pointer;">
+            <img src="https://images.pexels.com/photos/29999123/pexels-photo-29999123.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="养生音乐疗愈" class="img-fluid rounded" id="musicImage" style="cursor: pointer;">
             <h3>音乐疗愈</h3>
             <p>点击图像即可播放养生音乐，带来舒缓放松效果。</p >
         </div>
