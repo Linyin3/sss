@@ -91,11 +91,11 @@
 <div class="container py-5" id="music">
     <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
-        <div class="col-md-4 content-card" onclick="playMusic('https://example.com/relaxing-music.mp3')">
+        <div class="col-md-4 content-card" onclick="playMusic('https://www.bilibili.com/audio/au4711941?type=1')">
             <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="舒缓音乐">
             <h3>舒缓音乐</h3>
         </div>
-        <div class="col-md-4 content-card" onclick="playMusic('https://example.com/meditation-music.mp3')">
+        <div class="col-md-4 content-card" onclick="playMusic('https://www.bilibili.com/audio/au4711941?type=1')">
             <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="冥想音乐">
             <h3>冥想音乐</h3>
         </div>
