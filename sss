@@ -76,12 +76,12 @@
 <div class="container py-5" id="acupoints">
     <h2 class="text-center section-title mb-4">养生穴位引导</h2>
     <div class="row">
-        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal1">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.QQ7yAKMj5jjU03XP2KR8lAHaD4?w=291&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="太冲穴">
+        <div class="col-md-4 content-card" onclick="playVideo('https://example.com/taichong-acupoint.mp4')">
+            < img src="https://via.placeholder.com/300" alt="太冲穴">
             <h3>太冲穴</h3>
         </div>
-        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal2">
-            <img src="https://tse1.mm.bing.net/th/id/OIP.3TmYFVFX5Fh8sNqh3m7L9wHaEW?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="内关穴">
+        <div class="col-md-4 content-card" onclick="playVideo('https://example.com/neiguan-acupoint.mp4')">
+            < img src="https://via.placeholder.com/300" alt="内关穴">
             <h3>内关穴</h3>
         </div>
     </div>
@@ -91,16 +91,26 @@
 <div class="container py-5" id="music">
     <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
-        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal1">
-            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="舒缓音乐">
+        <div class="col-md-4 content-card" onclick="playMusic('https://example.com/relaxing-music.mp3')">
+            < img src="https://via.placeholder.com/300" alt="舒缓音乐">
             <h3>舒缓音乐</h3>
         </div>
-        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal2">
-            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="冥想音乐">
+        <div class="col-md-4 content-card" onclick="playMusic('https://example.com/meditation-music.mp3')">
+            < img src="https://via.placeholder.com/300" alt="冥想音乐">
             <h3>冥想音乐</h3>
         </div>
     </div>
 </div>
+<!-- JavaScript -->
+<script>
+    function playMusic(url) {
+        window.open(url, '_blank'); // 直接跳转到音乐播放页面
+    }
+
+    function playVideo(url) {
+        window.open(url, '_blank'); // 直接跳转到视频播放页面
+    }
+</script>
 
 <!-- 每日养生金句 -->
 <div class="container py-5">
@@ -139,21 +149,6 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="musicModal1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">舒缓音乐</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                推荐轻音乐，帮助身心放松，如大自然音效（雨声、鸟鸣）。
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- JavaScript -->
 <script>
     const quotes = [
