@@ -102,9 +102,8 @@
 
 <!-- 音频播放器（隐藏） -->
 <audio id="audioPlayer" style="display:none;" controls>
-    <audio controls>
-  <source src="https://music-1341782462.cos.ap-guangzhou.myqcloud.com/Inspiration.mp3" type="audio/mp3">
-  您的浏览器不支持 audio 标签。
+    <source src="https://music-1341782462.cos.ap-guangzhou.myqcloud.com/Inspiration.mp3" type="audio/mp3">
+    您的浏览器不支持 audio 标签。
 </audio>
 
 <!-- JavaScript 代码 -->
