@@ -151,12 +151,15 @@
         const encouragementTextElement = document.getElementById('encouragementText');
         encouragementTextElement.innerText = message;
 
-        // 显示文本并加入动画效果
-        encouragementTextElement.style.display = 'block';
+        // 先隐藏文本，移除任何动画
+        encouragementTextElement.style.display = 'none';
         encouragementTextElement.style.opacity = '0';
-        
-        // 动画效果（渐变显示和放大）
-        setTimeout(() => {
+        encouragementTextElement.style.transform = 'scale(1)';
+
+        // 强制触发重新渲染，以便下次动画能够生效
+        setTimeout(function() {
+            // 显示文本并加入动画效果
+            encouragementTextElement.style.display = 'block';
             encouragementTextElement.style.transition = 'all 1s ease';
             encouragementTextElement.style.opacity = '1';
             encouragementTextElement.style.transform = 'scale(1.1)';
