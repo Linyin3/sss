@@ -87,30 +87,37 @@
     </div>
 </div>
 
-<!-- 养生音乐疗愈 -->
-<div class="container py-5" id="music">
+<!-- 养生音乐疗愈模块 -->
+<div class="container py-5" id="music-therapy">
     <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
-        <div class="col-md-4 content-card" onclick="playMusic('https://www.bilibili.com/audio/au4711941?type=1')">
-            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="舒缓音乐">
-            <h3>舒缓音乐</h3>
-        </div>
-        <div class="col-md-4 content-card" onclick="playMusic('https://www.bilibili.com/audio/au4711941?type=1')">
-            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="冥想音乐">
-            <h3>冥想音乐</h3>
+        <!-- 音乐疗愈卡片 -->
+        <div class="col-md-4 acupoint">
+            < img src="https://via.placeholder.com/300x200" alt="养生音乐疗愈" class="img-fluid rounded" data-toggle="modal" data-target="#audioModal">
+            <h3>音乐疗愈</h3>
+            <p>点击图像即可播放养生音乐，带来舒缓放松效果。</p >
         </div>
     </div>
 </div>
-<!-- JavaScript -->
-<script>
-    function playMusic(url) {
-        window.open(url, '_blank'); // 直接跳转到音乐播放页面
-    }
 
-    function playVideo(url) {
-        window.open(url, '_blank'); // 直接跳转到视频播放页面
-    }
-</script>
+<!-- 音频模态框 -->
+<div class="modal fade" id="audioModal" tabindex="-1" aria-labelledby="audioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="audioModalLabel">养生音乐疗愈</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 音频播放器 -->
+                <audio controls>
+                    <source src="https://www.bilibili.com/audio/au4711941?type=1.mp3" type="audio/mpeg">
+                    您的浏览器不支持 audio 标签。
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- 每日养生金句 -->
 <div class="container py-5">
