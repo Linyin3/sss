@@ -3,147 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <title>情绪养生茶包</title>
-    <!-- 引入 Bootstrap 简化样式 -->
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 自定义样式 */
         body {
-            background: #f0f5e9; /* 柔和的绿色背景 */
+            background: #f0f5e9;
             font-family: 'Microsoft YaHei', sans-serif;
         }
-        .section {
+        .tea-card, .acupoint, .medical-card {
+            transition: transform 0.3s;
+            cursor: pointer;
             background: #fff;
-            border-radius: 10px;
             padding: 15px;
-            margin: 20px 0;
+            border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+        }
+        .tea-card:hover, .acupoint:hover, .medical-card:hover {
+            transform: translateY(-5px);
         }
         .section-title {
-            background-color: #a8d08d; /* 养生色调 */
-            padding: 10px;
+            background-color: #a8d08d;
+            padding: 15px;
             border-radius: 5px;
+        }
+        .modal-content {
+            font-size: 18px;
+        }
+        /* 每日养生金句样式 */
+        #daily-quote {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-        }
-        .clickable {
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .clickable:hover {
-            transform: translateY(-5px);
+            font-size: 22px;
+            font-weight: bold;
+            border: 2px solid #d4af37;
+            font-family: 'KaiTi', cursive;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            transition: opacity 1s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg bg-success text-white p-3">
-        <div class="container">
-            <a class="navbar-brand text-white" href=" ">静心养生茶</a >
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#products">产品</a ></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#acupoints">穴位引导</a ></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#therapy">养生音疗</a ></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#feedback">留言测评</a ></li>
-                </ul>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg bg-success text-white p-3">
+    <div class="container">
+        <a class="navbar-brand text-white" href=" ">静心养生茶</a >
+    </div>
+</nav>
+
+<!-- 养生茶系列 -->
+<div class="container py-5" id="products">
+    <h2 class="text-center section-title mb-4">养生茶系列</h2>
+    <div class="row">
+        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
+            <h3>安神助眠茶</h3>
+            <p>主要成分：酸枣仁、茯苓、百合</p >
+        </div>
+        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
+            <h3>舒缓解压茶</h3>
+            <p>主要成分：菊花、甘草、薄荷</p >
+        </div>
+        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
+            <h3>暖身补气茶</h3>
+            <p>主要成分：红枣、黄芪、枸杞</p >
+        </div>
+    </div>
+</div>
+
+<!-- 养生穴位引导 -->
+<div class="container py-5" id="acupoints">
+    <h2 class="text-center section-title mb-4">养生穴位引导</h2>
+    <div class="row">
+        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
+            <h3>太冲穴</h3>
+            <p>有助于调理情绪，缓解压力。</p >
+        </div>
+        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
+            <h3>内关穴</h3>
+            <p>有助于缓解焦虑，促进安眠。</p >
+        </div>
+        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
+            <h3>神门穴</h3>
+            <p>帮助宁心安神，减少焦躁情绪。</p >
+        </div>
+    </div>
+</div>
+
+<!-- 养生医疗 -->
+<div class="container py-5" id="medical">
+    <h2 class="text-center section-title mb-4">养生医疗</h2>
+    <div class="row">
+        <div class="col-md-4 medical-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
+            <h3>如何缓解压力？</h3>
+            <p>点击查看详细调理方案</p >
+        </div>
+        <div class="col-md-4 medical-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
+            <h3>如何改善睡眠？</h3>
+            <p>点击查看详细调理方案</p >
+        </div>
+    </div>
+</div>
+
+<!-- 每日养生金句 -->
+<div class="container py-5">
+    <h2 class="text-center section-title mb-4">每日养生金句</h2>
+    <div class="text-center">
+        <div id="daily-quote">点击获取今日养生金句</div>
+        <button class="btn btn-success mt-3" onclick="getDailyQuote()">获取养生金句</button>
+    </div>
+</div>
+
+<!-- 模态框 -->
+<div class="modal fade" id="teaModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">茶品详情</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                这里是茶品的详细介绍内容。
             </div>
         </div>
-    </nav>
+    </div>
+</div>
 
-    <!-- 养生茶系列 -->
-    <div class="container section" id="products">
-        <h2 class="section-title">养生茶系列</h2>
-        <div class="row">
-            <div class="col-md-6 clickable" data-bs-toggle="modal" data-bs-target="#teaModal">
-                < img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg" class="img-fluid rounded" alt="安神助眠茶">
-                <h3>安神助眠茶</h3>
-                <p>酸枣仁、茯苓、百合，助眠安神。</p >
+<div class="modal fade" id="acupointModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">穴位详情</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                这里是穴位的详细介绍内容。
             </div>
         </div>
     </div>
+</div>
 
-    <!-- 养生穴位引导 -->
-    <div class="container section" id="acupoints">
-        <h2 class="section-title">养生穴位引导</h2>
-        <div class="row">
-            <div class="col-md-6 clickable" data-bs-toggle="modal" data-bs-target="#acupointModal">
-                < img src="https://images.pexels.com/photos/5949005/pexels-photo-5949005.jpeg" alt="太冲穴" class="img-fluid rounded">
-                <h3>太冲穴</h3>
-                <p>有助于调理情绪，缓解压力。</p >
-            </div>
-        </div>
-    </div>
+<!-- JavaScript -->
+<script>
+    const quotes = [
+        "早睡早起，养生之道。",
+        "茶能养生，亦能养心。",
+        "经络畅通，百病不生。",
+        "适量运动，健康长存。",
+        "养生贵在坚持，健康方能长久。"
+    ];
+    
+    function getDailyQuote() {
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        const quoteElement = document.getElementById("daily-quote");
+        quoteElement.style.opacity = "0";
+        setTimeout(() => {
+            quoteElement.textContent = quote;
+            quoteElement.style.opacity = "1";
+        }, 500);
+    }
+</script>
 
-    <!-- 养生音疗 -->
-    <div class="container section" id="therapy">
-        <h2 class="section-title">养生音疗</h2>
-        <div class="clickable text-center" data-bs-toggle="modal" data-bs-target="#therapyModal">
-            < img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg" alt="养生音疗" class="img-fluid rounded">
-            <h3>点击播放养生音乐</h3>
-        </div>
-    </div>
-
-    <!-- 用户留言测评 -->
-    <div class="container section" id="feedback">
-        <h2 class="section-title">用户留言测评</h2>
-        <form id="feedbackForm">
-            <textarea class="form-control" id="feedbackText" rows="3" placeholder="请输入您的留言..."></textarea>
-            <button type="submit" class="btn btn-success mt-2">提交</button>
-        </form>
-        <p id="feedbackResponse" class="mt-3 text-success" style="display:none;">感谢您的留言！</p >
-    </div>
-
-    <!-- 每日养生金句 -->
-    <div class="container section text-center">
-        <h2 class="section-title">每日养生金句</h2>
-        <button class="btn btn-warning" onclick="showRandomQuote()">点击获取</button>
-        <p id="quoteDisplay" class="mt-3"></p >
-    </div>
-
-    <!-- 模态框 -->
-    <div class="modal fade" id="teaModal">
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body">详细茶饮介绍...</div></div></div>
-    </div>
-
-    <div class="modal fade" id="acupointModal">
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body">< img src="https://via.placeholder.com/400" class="img-fluid"><p>按摩教程...</p ></div></div></div>
-    </div>
-
-    <div class="modal fade" id="therapyModal">
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body">
-            <audio controls>
-                <source src="https://www.example.com/audio.mp3" type="audio/mpeg">
-            </audio>
-        </div></div></div>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        // 处理留言提交
-        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.getElementById("feedbackResponse").style.display = "block";
-            setTimeout(() => { document.getElementById("feedbackResponse").style.display = "none"; }, 3000);
-        });
-
-        // 养生金句库
-        const quotes = [
-            "早睡早起，精神百倍。",
-            "多喝温水，调养身体。",
-            "静心养气，少忧少虑。",
-            "健康饮食，平衡营养。",
-            "适量运动，强身健体。"
-        ];
-
-        function showRandomQuote() {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quoteDisplay").innerText = quotes[randomIndex];
-        }
-    </script>
-
-    <!-- 引入 Bootstrap JavaScript -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
