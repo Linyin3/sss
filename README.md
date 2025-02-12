@@ -115,12 +115,12 @@
     });
 </script>
 
-<!-- 每日养生金句 -->
+<!-- 我有话想对你说 -->
 <div class="container py-5">
-    <h2 class="text-center section-title mb-4">每日养生金句</h2>
+    <h2 class="text-center section-title mb-4">我有话想对你说</h2>
     <div class="text-center">
         <div id="daily-quote">点击获取今日养生金句</div>
-        <button class="btn btn-success mt-3" onclick="getDailyQuote()">获取养生金句</button>
+        <button class="btn btn-success mt-3" onclick="getDailyQuote()">你说叭</button>
     </div>
 </div>
 
