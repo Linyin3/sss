@@ -115,14 +115,26 @@
     });
 </script>
 
-<!-- 我有话想对你说 -->
-<div class="container py-5">
+<!-- 我有话想对你说模块 -->
+<div class="container py-5" id="emotion-value">
     <h2 class="text-center section-title mb-4">我有话想对你说</h2>
-    <div class="text-center">
-        <div id="daily-quote">点击获取今日养生金句</div>
-        <button class="btn btn-success mt-3" onclick="getDailyQuote()">你说叭</button>
+    <div class="row">
+        <!-- 情绪价值卡片 -->
+        <div class="col-md-4 acupoint">
+            < img src="https://images.pexels.com/photos/29999123/pexels-photo-29999123.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="情绪价值" class="img-fluid rounded" id="emotionImage" style="cursor: pointer;">
+            <h3>情绪关怀</h3>
+            <p>点击图像，我们来聊聊心情，带来温暖和正能量。</p >
+            <button class="btn btn-primary mt-3" id="emotionButton">你说叭</button>
+        </div>
     </div>
 </div>
+
+<!-- JavaScript 代码 -->
+<script>
+    document.getElementById('emotionButton').addEventListener('click', function() {
+        alert("你想说什么？这里有个空间给你表达！");
+    });
+</script>
 
 <!-- 模态框 -->
 <div class="modal fade" id="teaModal1">
