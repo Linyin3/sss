@@ -91,9 +91,9 @@
 <div class="container py-5" id="music-therapy">
     <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
-        <!-- 音乐疗愈卡片 -->
+        <!-- 舒缓音乐疗愈 -->
         <div class="col-md-4 acupoint">
-            < img src="https://via.placeholder.com/300x200" alt="养生音乐疗愈" class="img-fluid rounded" data-toggle="modal" data-target="#audioModal">
+            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="舒缓音乐疗愈" class="img-fluid rounded" data-toggle="modal" data-target="#audioModal">
             <h3>音乐疗愈</h3>
             <p>点击图像即可播放养生音乐，带来舒缓放松效果。</p >
         </div>
