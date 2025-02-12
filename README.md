@@ -102,7 +102,7 @@
 
 <!-- 音频播放器（隐藏） -->
 <audio id="audioPlayer" style="display:none;" controls>
-    <source src="https://www.bilibili.com/audio/au4711941?type=1.mp3" type="audio/mpeg">
+    <source src="https://music-1341782462.cos.ap-guangzhou.myqcloud.com/Inspiration.mp3" type="audio/mpeg">
     您的浏览器不支持 audio 标签。
 </audio>
 
