@@ -62,11 +62,11 @@
     <h2 class="text-center section-title mb-4">养生茶系列</h2>
     <div class="row">
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#teaModal1">
-            < img src="https://via.placeholder.com/300" alt="安神助眠茶">
+            <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="安神助眠茶">
             <h3>安神助眠茶</h3>
         </div>
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#teaModal2">
-            < img src="https://via.placeholder.com/300" alt="舒缓解压茶">
+            <img src="https://images.pexels.com/photos/9443525/pexels-photo-9443525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="舒缓解压茶">
             <h3>舒缓解压茶</h3>
         </div>
     </div>
@@ -77,11 +77,11 @@
     <h2 class="text-center section-title mb-4">养生穴位引导</h2>
     <div class="row">
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal1">
-            < img src="https://via.placeholder.com/300" alt="太冲穴">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.QQ7yAKMj5jjU03XP2KR8lAHaD4?w=291&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="太冲穴">
             <h3>太冲穴</h3>
         </div>
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal2">
-            < img src="https://via.placeholder.com/300" alt="内关穴">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.3TmYFVFX5Fh8sNqh3m7L9wHaEW?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="内关穴">
             <h3>内关穴</h3>
         </div>
     </div>
@@ -92,11 +92,11 @@
     <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal1">
-            < img src="https://via.placeholder.com/300" alt="舒缓音乐">
+            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="舒缓音乐">
             <h3>舒缓音乐</h3>
         </div>
         <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal2">
-            < img src="https://via.placeholder.com/300" alt="冥想音乐">
+            <img src="https://images.pexels.com/photos/30666404/pexels-photo-30666404.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="冥想音乐">
             <h3>冥想音乐</h3>
         </div>
     </div>
