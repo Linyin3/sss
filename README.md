@@ -9,7 +9,7 @@
             background: #f0f5e9;
             font-family: 'Microsoft YaHei', sans-serif;
         }
-        .tea-card, .acupoint, .medical-card {
+        .content-card {
             transition: transform 0.3s;
             cursor: pointer;
             background: #fff;
@@ -17,17 +17,21 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin: 10px 0;
+            text-align: center;
         }
-        .tea-card:hover, .acupoint:hover, .medical-card:hover {
+        .content-card:hover {
             transform: translateY(-5px);
+        }
+        .content-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
         }
         .section-title {
             background-color: #a8d08d;
             padding: 15px;
             border-radius: 5px;
-        }
-        .modal-content {
-            font-size: 18px;
         }
         /* 每日养生金句样式 */
         #daily-quote {
@@ -57,17 +61,13 @@
 <div class="container py-5" id="products">
     <h2 class="text-center section-title mb-4">养生茶系列</h2>
     <div class="row">
-        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#teaModal1">
+            < img src="https://via.placeholder.com/300" alt="安神助眠茶">
             <h3>安神助眠茶</h3>
-            <p>主要成分：酸枣仁、茯苓、百合</p >
         </div>
-        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#teaModal2">
+            < img src="https://via.placeholder.com/300" alt="舒缓解压茶">
             <h3>舒缓解压茶</h3>
-            <p>主要成分：菊花、甘草、薄荷</p >
-        </div>
-        <div class="col-md-4 tea-card" data-bs-toggle="modal" data-bs-target="#teaModal">
-            <h3>暖身补气茶</h3>
-            <p>主要成分：红枣、黄芪、枸杞</p >
         </div>
     </div>
 </div>
@@ -76,32 +76,28 @@
 <div class="container py-5" id="acupoints">
     <h2 class="text-center section-title mb-4">养生穴位引导</h2>
     <div class="row">
-        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal1">
+            < img src="https://via.placeholder.com/300" alt="太冲穴">
             <h3>太冲穴</h3>
-            <p>有助于调理情绪，缓解压力。</p >
         </div>
-        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#acupointModal2">
+            < img src="https://via.placeholder.com/300" alt="内关穴">
             <h3>内关穴</h3>
-            <p>有助于缓解焦虑，促进安眠。</p >
-        </div>
-        <div class="col-md-4 acupoint" data-bs-toggle="modal" data-bs-target="#acupointModal">
-            <h3>神门穴</h3>
-            <p>帮助宁心安神，减少焦躁情绪。</p >
         </div>
     </div>
 </div>
 
-<!-- 养生医疗 -->
-<div class="container py-5" id="medical">
-    <h2 class="text-center section-title mb-4">养生医疗</h2>
+<!-- 养生音乐疗愈 -->
+<div class="container py-5" id="music">
+    <h2 class="text-center section-title mb-4">养生音乐疗愈</h2>
     <div class="row">
-        <div class="col-md-4 medical-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
-            <h3>如何缓解压力？</h3>
-            <p>点击查看详细调理方案</p >
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal1">
+            < img src="https://via.placeholder.com/300" alt="舒缓音乐">
+            <h3>舒缓音乐</h3>
         </div>
-        <div class="col-md-4 medical-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
-            <h3>如何改善睡眠？</h3>
-            <p>点击查看详细调理方案</p >
+        <div class="col-md-4 content-card" data-bs-toggle="modal" data-bs-target="#musicModal2">
+            < img src="https://via.placeholder.com/300" alt="冥想音乐">
+            <h3>冥想音乐</h3>
         </div>
     </div>
 </div>
@@ -116,29 +112,43 @@
 </div>
 
 <!-- 模态框 -->
-<div class="modal fade" id="teaModal" tabindex="-1">
+<div class="modal fade" id="teaModal1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">茶品详情</h5>
+                <h5 class="modal-title">安神助眠茶</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                这里是茶品的详细介绍内容。
+                主要成分：酸枣仁、茯苓、百合。具有助眠安神的功效。
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="acupointModal" tabindex="-1">
+<div class="modal fade" id="acupointModal1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">穴位详情</h5>
+                <h5 class="modal-title">太冲穴</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                这里是穴位的详细介绍内容。
+                位置：足背，第一、二跖骨结合部前方凹陷处。 功效：缓解压力，调节情绪。
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="musicModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">舒缓音乐</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                推荐轻音乐，帮助身心放松，如大自然音效（雨声、鸟鸣）。
             </div>
         </div>
     </div>
